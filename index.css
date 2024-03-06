@@ -1,0 +1,196 @@
+html {
+    max-width:70ch;
+    margin:auto;
+    color:#333;
+    font-family:-apple-system,system-ui,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;
+    overflow-x:hidden;
+    height:100%
+  }
+  nav {
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding-right:.5em
+  }
+  @keyframes sway {
+    33% {
+      transform:rotate(var(--wind-speed));
+      transform-origin:7px 9px
+    }
+    66% {
+      transform:rotate(-var(--wind-speed));
+      transform-origin:7px 9px
+    }
+  }
+  .windspeed {
+    animation:sway 4s infinite;
+    font-size:1rem
+  }
+  .btn--reload {
+    border:none;
+    background-color:inherit;
+    padding:0
+  }
+  .radar {
+    display:flex;
+    justify-content:center
+  }
+  body {
+    height:100%;
+    overflow-x:hidden
+  }
+  h2 {
+    margin-bottom:0
+  }
+  hr {
+    filter:opacity(20%)
+  }
+  .grayscale {
+    filter:grayscale(100%)
+  }
+  .error:before {
+    content:"Something wen't wrong 💔, try refreshing...";
+    text-align:center
+  }
+  .warn {
+    text-align:center;
+    background-color:#fff3cd;
+    border-color:#ffecb5;
+    color:#664d03;
+    border:1px solid transparent;
+    border-radius:.25rem
+  }
+  small {
+    font-size:.1rem
+  }
+  .summary--row>* {
+    padding-right:1rem
+  }
+  .summary--row {
+    display:flex;
+    align-items:center
+  }
+  summary {
+    display:block;
+    outline:none
+  }
+  summary::-webkit-details-marker {
+    display:none
+  }
+  summary::marker {
+    list-style-type:none
+  }
+  .summary--title {
+    flex:.5
+  }
+  .weather--row_cell {
+    padding-top:var(--temp-height);
+    padding-bottom:1rem;
+    font-size:1.5rem
+  }
+  summary:before {
+    content:"➕";
+    float:right;
+    width:20px;
+    height:20px;
+    color:#8080804d;
+    font-size:.5rem
+  }
+  details[open] summary:before {
+    content:"➖"
+  }
+  .installing {
+    background-position:center;
+    -webkit-animation:pulse 1.2s ease-in;
+    -webkit-animation-iteration-count:infinite;
+    background-image:url(/assets/loading-fNa-GcVR.png);
+    background-repeat:no-repeat;
+    height:100%
+  }
+  .loading {
+    -webkit-animation:pulse 1.2s ease-in;
+    -webkit-animation-iteration-count:infinite;
+    opacity:.3;
+    touch-action:none
+  }
+  @-webkit-keyframes pulse {
+    0% {
+      opacity:.3
+    }
+    50% {
+      opacity:1
+    }
+    to {
+      opacity:.3
+    }
+  }
+  .weather--row_graphics {
+    display:flex;
+    align-items:center;
+    overflow-x:auto;
+    justify-content:space-evenly
+  }
+  .temp:after {
+    content:"°"
+  }
+  .weather--row_graphics>* {
+    padding-right:1rem
+  }
+  .weather--row_description {
+    display:flex
+  }
+  .summary--temp-bar-container {
+    display:flex;
+    flex:1;
+    height:1rem;
+    justify-content:flex-end
+  }
+  .summary--offset {
+    width:var(--bar-width);
+    max-width:inherit;
+    height:1rem
+  }
+  .summary--temp-bar {
+    width:var(--bar-width);
+    background-image:linear-gradient(75deg,#666666b3,#666);
+    border-radius:1rem;
+    content:"&nbsp";
+    margin-left:.5rem;
+    margin-right:.5rem;
+    height:1rem
+  }
+  @media screen and (max-width: 600px) {
+    .summary--temp-bar {
+      width:1rem;
+      border-radius:0;
+      background-color:inherit;
+      background-image:inherit;
+      text-align:center;
+      font-weight:700
+    }
+    .summary--temp-bar:after {
+      content:"➜"
+    }
+  }
+  .center {
+    text-align:center
+  }
+  .time {
+    text-transform:lowercase;
+    font-size:.7rem;
+    word-spacing:-.1rem;
+    text-align:center;
+    font-variant:small-caps
+  }
+  .temp {
+    text-align:center;
+    font-size:.8rem
+  }
+  .icon {
+    text-align:center
+  }
+  .icon-group {
+    display:flex;
+    align-items:center
+  }
+  
