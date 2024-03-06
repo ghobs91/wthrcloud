@@ -1,7 +1,8 @@
 html {
     max-width:70ch;
     margin:auto;
-    color:#333;
+    background-color: #181a1b !important;
+    color-scheme: dark !important;
     font-family:-apple-system,system-ui,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;
     overflow-x:hidden;
     height:100%
@@ -37,6 +38,7 @@ html {
   }
   body {
     height:100%;
+    color: #e8e6e3 !important;
     overflow-x:hidden
   }
   h2 {
